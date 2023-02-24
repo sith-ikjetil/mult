@@ -1,7 +1,17 @@
+!
+! module mult_util
+! 
+! misc functions and subroutines
+!
 module mult_util
     implicit none
 
 contains
+    !
+    ! function string_to_integer
+    !
+    ! tries to convert a string to a number
+    !
     integer function string_to_integer(string_input, version)
         implicit none
         character(*), intent(in)    :: string_input
@@ -25,6 +35,11 @@ contains
         string_to_integer = integer_output
     end function string_to_integer
 
+    !
+    ! subroutine PrintUsage
+    !
+    ! prints out usage screen
+    !
     subroutine PrintUsage(version)
         character(*), intent(in) :: version
                     
@@ -46,6 +61,11 @@ contains
     end subroutine PrintUsage
 end module mult_util
 
+!
+! program main
+!
+! program entrypoint
+!
 program main
     !
     ! use
@@ -89,6 +109,11 @@ program main
     call exit(0)
 
 contains
+    !
+    ! subroutine PrintTable
+    !
+    ! prints out multiplication table
+    !
     subroutine PrintTable(from, to, version)
         implicit none
         character(len=*), intent(in)    :: version
