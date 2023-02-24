@@ -1,4 +1,4 @@
-# ccat
+# mult
 License: **GPL-3.0-or-later**  
 
 Multiplication table.  
