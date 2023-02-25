@@ -36,6 +36,18 @@ contains
     end function string_to_integer
 
     !
+    ! fulnction integer_to_string
+    !
+    ! converts an integer to string
+    !
+    character(len=20) function integer_to_string(i)
+        integer, intent(in) :: i
+        character(len=20)   :: str
+        write (str, *) i
+        integer_to_string = adjustl(str)
+    end function integer_to_string
+    
+    !
     ! subroutine PrintUsage
     !
     ! prints out usage screen
@@ -123,7 +135,7 @@ contains
         character(len=50)               :: sep_line
         
         print *, ' '
-        print *, '  Multiplication Table v', version
+        print *, '  Multiplication Table v', version 
         print *, ' '
 
         n = to
