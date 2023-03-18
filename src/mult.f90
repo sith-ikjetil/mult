@@ -105,7 +105,7 @@ program main
         call get_command_argument(1, arg)
         if (arg == 'all') then
             call PrintTable(1, 12, version)
-        else if (arg == '-?' .or. arg == '--help') then
+        else if (arg == '-h' .or. arg == '--help') then
             call PrintUsage(version)
         else
             mult_value = string_to_integer(arg, version)
